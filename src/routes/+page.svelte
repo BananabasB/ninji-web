@@ -1,6 +1,6 @@
 
 <script lang="ts">
-  import DownArrow from 'phosphor-icons-svelte/IconArrowDownBold.svelte'
+	import DownArrow from 'phosphor-icons-svelte/IconArrowDownBold.svelte'
 </script>
 <main class="relative flex h-screen w-full items-center overflow-hidden">
 	<div class="ml-20 space-y-2 text-left">
@@ -9,12 +9,12 @@
 		<div class="mt-3.5 flex flex-row gap-2">
 			<a
 				href="/download"
-				class="rounded-2xl flex-row font-medium flex items-center gap-1.5 border-y border-y-neutral-600 bg-neutral-800 p-3 py-1.5 text-white outline outline-black transition-colors duration-75 hover:bg-neutral-850 active:translate-y-px"
+				class="rounded-2xl flex-row font-medium flex items-center gap-1.5 border-y border-y-neutral-600 bg-gradient-to-b from-white/[0.06] to-transparent bg-neutral-800 p-3 py-1.5 text-white outline outline-black transition-colors duration-75 hover:bg-neutral-850 active:translate-y-px"
 				><DownArrow class="size-4" /> Download for Mac</a
 			>
 			<a
 				href="https://github.com/BananabasB/ninji"
-				class="inline-flex items-center gap-1.5 rounded-2xl border-y border-y-white bg-neutral-200 p-3 py-1.5 text-black outline outline-neutral-300 transition-colors duration-75 hover:bg-neutral-250 active:translate-y-px"
+				class="inline-flex items-center gap-1.5 rounded-2xl border-y border-y-white bg-gradient-to-b from-black/[0.04] to-transparent bg-neutral-200 p-3 py-1.5 text-black outline outline-neutral-300 transition-colors duration-75 hover:bg-neutral-250 active:translate-y-px"
 			>
 				<svg role="img" viewBox="0 0 24 24" class="size-4" fill="currentColor"
 					><path
