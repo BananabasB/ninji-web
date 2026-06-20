@@ -2,19 +2,19 @@
 <script lang="ts">
 	import DownArrow from 'phosphor-icons-svelte/IconArrowDownBold.svelte'
 </script>
-<main class="relative flex h-screen w-full items-center overflow-hidden">
-	<div class="ml-20 space-y-2 text-left">
+<main class="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden md:flex-row md:justify-start">
+	<div class="mx-4 mt-20 space-y-2 text-center md:ml-20 md:mt-0 md:text-left">
 		<h1 class="font-display text-4xl font-extrabold">ninji</h1>
 		<p>Ninji is a lightweight macOS desktop wrapper for Nintendo Music.</p>
-		<div class="mt-3.5 flex flex-row gap-2">
+		<div class="mt-3.5 flex flex-row flex-wrap items-center justify-center gap-2 md:justify-start">
 			<a
 				href="/download"
-				class="rounded-2xl flex-row font-medium flex items-center gap-1.5 border-y border-y-neutral-600 bg-gradient-to-b from-white/[0.06] to-transparent bg-neutral-800 p-3 py-1.5 text-white outline outline-black transition-colors duration-75 hover:bg-neutral-850 active:translate-y-px"
+				class="rounded-2xl flex-row font-medium flex items-center gap-1.5 border-y border-y-neutral-600 bg-gradient-to-b from-neutral-700 via-neutral-950 to-neutral-950 p-3 py-1.5 text-white outline outline-black transition-all duration-75 hover:from-neutral-700 hover:to-neutral-900 active:translate-y-px"
 				><DownArrow class="size-4" /> Download for Mac</a
 			>
 			<a
 				href="https://github.com/BananabasB/ninji"
-				class="inline-flex items-center gap-1.5 rounded-2xl border-y border-y-white bg-gradient-to-b from-black/[0.04] to-transparent bg-neutral-200 p-3 py-1.5 text-black outline outline-neutral-300 transition-colors duration-75 hover:bg-neutral-250 active:translate-y-px"
+				class="inline-flex items-center gap-1.5 rounded-2xl border-y border-y-white bg-gradient-to-b from-neutral-100 via-neutral-200 to-neutral-200 p-3 py-1.5 text-black outline outline-neutral-300 transition-all duration-75 hover:from-neutral-50 hover:to-neutral-200 active:translate-y-px"
 			>
 				<svg role="img" viewBox="0 0 24 24" class="size-4" fill="currentColor"
 					><path
@@ -25,7 +25,7 @@
 			</a>
 		</div>
 	</div>
-	<img src="/screenshot.png" alt="Ninji app screenshot" class="absolute right-10 h-[60vh] w-auto rounded-2xl object-contain" />
+	<img src="/screenshot.png" alt="Ninji app screenshot" class="relative mt-8 h-auto w-4/5 max-w-md rounded-2xl object-contain md:absolute md:right-10 md:mt-0 md:h-[60vh] md:w-auto md:max-w-none" />
 
-	<img src="/block-art.svg" class="pointer-events-none absolute bottom-0 right-10 -z-10 h-40" alt="" style="image-rendering: crisp-edges" />
+	<img src="/block-art.svg" class="pointer-events-none absolute bottom-0 right-0 -z-10 h-24 md:right-10 md:h-40" alt="" style="image-rendering: crisp-edges" />
 </main>
