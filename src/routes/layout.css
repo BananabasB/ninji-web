@@ -1,0 +1,91 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@theme {
+	--font-sans: 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif;
+}
+@font-face {
+	font-family: 'Make Sans';
+	src: url('https://assets.frg.network/fonts/MakeSans-Light.woff2') format('woff2');
+	font-weight: 300;
+}
+@font-face {
+	font-family: 'Make Sans';
+	src: url('https://assets.frg.network/fonts/MakeSans-Regular.woff2') format('woff2');
+	font-weight: 400;
+}
+@font-face {
+	font-family: 'Make Sans';
+	src: url('https://assets.frg.network/fonts/MakeSans-Medium.woff2') format('woff2');
+	font-weight: 500;
+}
+@font-face {
+	font-family: 'Make Sans';
+	src: url('https://assets.frg.network/fonts/MakeSans-SemiBold.woff2') format('woff2');
+	font-weight: 600;
+}
+@font-face {
+	font-family: 'Make Sans';
+	src: url('https://assets.frg.network/fonts/MakeSans-Bold.woff2') format('woff2');
+	font-weight: 700;
+}
+@font-face {
+	font-family: 'Make Sans';
+	src: url('https://assets.frg.network/fonts/MakeSans-ExtraBold.woff2') format('woff2');
+	font-weight: 800;
+}
+@font-face {
+	font-family: 'Make Sans';
+	src: url('https://assets.frg.network/fonts/MakeSans-Black.woff2') format('woff2');
+	font-weight: 900;
+}
+.font-display {
+	font-family: 'Make Sans';
+}
+
+:root {
+	--color-bg: white;
+	--color-foreground: black;
+	/* base radius used by components and Tailwind mapping (if configured) */
+	--radius: 0.6rem;
+	--radius-sm: calc(var(--radius) - 0.125rem);
+	--radius-md: var(--radius);
+	--radius-lg: calc(var(--radius) * 1.5);
+	--radius-xl: calc(var(--radius) * 2);
+}
+
+/* Prefer superellipse corner shape if available */
+* {
+	corner-shape: superellipse(2);
+	--default-font-family: var(--font-sans);
+	font-feature-settings: 'ss01', 'cv03';
+	-webkit-font-smoothing: antialiased;
+}
+
+@supports (corner-shape: superellipse(2)) {
+	:root {
+		/* slightly larger radii when superellipse is supported for nicer pill shapes */
+		--radius: 0.8rem;
+		--radius-sm: calc(var(--radius) - 0.125rem);
+		--radius-md: var(--radius);
+		--radius-lg: calc(var(--radius) * 1.5);
+		--radius-xl: calc(var(--radius) * 2);
+	}
+}
+
+/* Optional utility classes that use the CSS variables (useful if Tailwind isn't configured) */
+.radius {
+	border-radius: var(--radius) !important;
+}
+.radius-sm {
+	border-radius: var(--radius-sm) !important;
+}
+.radius-md {
+	border-radius: var(--radius-md) !important;
+}
+.radius-lg {
+	border-radius: var(--radius-lg) !important;
+}
+.radius-xl {
+	border-radius: var(--radius-xl) !important;
+}
