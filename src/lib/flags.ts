@@ -4,13 +4,18 @@ function hash(id: string, key: string): number {
 	let h = 0;
 	const s = id + ':' + key;
 	for (let i = 0; i < s.length; i++) {
-		h = ((h << 5) - h) + s.charCodeAt(i);
+		h = (h << 5) - h + s.charCodeAt(i);
 		h |= 0;
 	}
 	return Math.abs(h);
 }
 
-function decide<T extends string>(key: string, variants: T[], defaultValue: T, description: string) {
+function decide<T extends string>(
+	key: string,
+	variants: T[],
+	defaultValue: T,
+	description: string
+) {
 	return flag<T>({
 		key,
 		defaultValue,

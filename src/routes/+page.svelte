@@ -17,23 +17,25 @@
 </script>
 
 <svelte:window onkeydown={handleKey} onkeyup={handleKey} />
-<main class="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden md:flex-row md:justify-start">
-	<div class="mx-4 mt-20 space-y-2 text-center md:ml-20 md:mt-0 md:text-left">
+<main
+	class="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden md:flex-row md:justify-start"
+>
+	<div class="mx-4 mt-20 space-y-2 text-center md:mt-0 md:ml-20 md:text-left">
 		<h1 class="font-display text-4xl font-extrabold">ninji</h1>
 		<p>{data.flags.tagline}</p>
-		<div
-			class="mt-3.5 flex flex-row flex-wrap items-center justify-center gap-2 md:justify-start"
-		>
+		<div class="mt-3.5 flex flex-row flex-wrap items-center justify-center gap-2 md:justify-start">
 			<a
 				href="/download"
 				onclick={onDownload}
-				class="rounded-2xl flex-row font-medium flex items-center gap-1.5 border-y border-y-neutral-600 bg-gradient-to-b from-neutral-700 via-neutral-950 to-neutral-950 p-3 py-1.5 text-white outline outline-black transition-all duration-75 hover:from-neutral-700 hover:to-neutral-900 active:translate-y-px"
+				class="flex flex-row items-center gap-1.5 rounded-2xl border-y border-y-neutral-600 bg-gradient-to-b from-neutral-700 via-neutral-950 to-neutral-950 p-3 py-1.5 font-medium text-white outline outline-black transition-all duration-75 hover:from-neutral-700 hover:to-neutral-900 active:translate-y-px"
 			>
 				<DownArrow class="size-4" />
 				{data.flags.buttonLabel}
 			</a>
 			<a
-				href={shiftHeld ? 'https://github.com/BananabasB/ninji-web' : 'https://github.com/BananabasB/ninji'}
+				href={shiftHeld
+					? 'https://github.com/BananabasB/ninji-web'
+					: 'https://github.com/BananabasB/ninji'}
 				target="_blank"
 				rel="noreferrer"
 				class="inline-flex items-center gap-1.5 rounded-2xl border-y border-y-white bg-gradient-to-b from-neutral-100 via-neutral-200 to-neutral-200 p-3 py-1.5 text-black outline outline-neutral-300 transition-all duration-75 hover:from-neutral-50 hover:to-neutral-200 active:translate-y-px"
@@ -55,7 +57,7 @@
 
 	<img
 		src="/block-art.svg"
-		class="pointer-events-none absolute bottom-0 right-0 -z-10 h-24 md:right-10 md:h-40"
+		class="pointer-events-none absolute right-0 bottom-0 -z-10 h-24 md:right-10 md:h-40"
 		alt=""
 		style="image-rendering: crisp-edges"
 	/>
