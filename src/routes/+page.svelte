@@ -22,6 +22,8 @@
 			>
 			<a
 				href={shiftHeld ? 'https://github.com/BananabasB/ninji-web' : 'https://github.com/BananabasB/ninji'}
+				target="_blank"
+				rel="noreferrer"
 				class="inline-flex items-center gap-1.5 rounded-2xl border-y border-y-white bg-gradient-to-b from-neutral-100 via-neutral-200 to-neutral-200 p-3 py-1.5 text-black outline outline-neutral-300 transition-all duration-75 hover:from-neutral-50 hover:to-neutral-200 active:translate-y-px"
 			>
 				<svg role="img" viewBox="0 0 24 24" class="size-4" fill="currentColor"
